@@ -1,0 +1,17 @@
+{
+  "name": "pureje7webpackdevserverproxy",
+  "version": "0.0.1",
+  "description": "Ardas JS training. Pure.js #7 webpack-dev-server proxy example.",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server --open"
+  },
+  "author": "taldy",
+  "devDependencies": {
+    "webpack": "^4.30.0",
+    "webpack-dev-server": "^3.3.1"
+  },
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
+}

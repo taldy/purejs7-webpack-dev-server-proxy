@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <title>Pure.js #7 - eventloop, ajax</title>
+    <style>
+      body {
+        background: blue;
+        color: #ddd;
+        /* font-size: 20px; */
+      }
+
+      input, select, textarea, button {
+        font-size: 20px;
+        margin: 5px;
+      }
+
+      button, textarea {
+        display: block;
+      }
+
+      textarea[disabled] {
+        opacity: .2
+      }
+
+      .loader {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border: 3px solid #f3f3f3; /* Light grey */
+        border-top: 3px solid #a0a0a0;
+        border-bottom: 3px solid #a0a0a0;
+        border-left: 3px solid transparent;
+        border-right: 3px solid transparent;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 2s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Pure.js #7. AJAX</h1>
+    <h2>webpack-dev-server proxy</h2>
+
+    <div class="loader"></div>
+
+    <div id="container1">
+      <select class="method">
+        <option value="get">GET</option>
+        <option value="post">POST</option>
+        <option value="put">PUT</option>
+        <option value="patch">PATCH</option>
+        <option value="delete">DELETE</option>
+      </select>
+      <input type="text" class="url" value="/api/card" size="50">
+      <textarea class="request" cols="30" rows="6">
+{
+  "title":"New Card",
+  "columnId":5
+}
+      </textarea>
+      <button>Run!</button>
+      <h3 class="response-status"></h3>
+      <pre class="response"></pre>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
